@@ -1,0 +1,10 @@
+{% load static %}
+
+<div class="card mb-2">
+    <img  width="200" height="300" src="{% static 'img/'|add:video.resim %}" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">{{ video.video_adi }}</h5>
+    <p class="card-text">{{ video.aciklama }}</p>
+    <a href="{% url 'details' video.id %}" class="btn btn-danger">Detaylar</a>
+    </div>
+</div>

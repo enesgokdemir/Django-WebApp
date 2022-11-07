@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'partials/_navbar.html' %}
+    <div class="container mt-4">
+        <div class="row">
+           <div class="col-12">
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img width="400" height="600" src="{% static 'img/'|add:video.resim %}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">       
+                    <div class="card-body">
+                      <h5 class="card-title">{{ video.video_adi }}</h5>
+                      <p class="card-text">{{ video.aciklama }}</p>  
+                      <iframe width="700" height="400" class="embed-responsive-item" src="{% static 'video/'|add:video.video_video %}" allow="fullscreen"></iframe>                   
+                    </div>                                   
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+    
+    </div>
+
+</body>
+</html>
